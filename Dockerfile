@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     ffmpeg && \
     rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade youtube-dl
+RUN pip install --upgrade youtube-dl==2021.06.06
 
 ENTRYPOINT ["youtube-dl"]
 CMD ["--help"]
